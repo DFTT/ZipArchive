@@ -10,6 +10,7 @@
 
 #if COCOAPODS
 #import <SSZipArchive.h>
+#import <SSZipArchivePreview.h>
 #else
 #import <ZipArchive.h>
 #endif
@@ -89,6 +90,12 @@
                                         delegate:nil
                                  progressHandler:nil
                                completionHandler:nil];
+    
+    /// 预览
+    [SSZipArchivePreview preViewZipFileAtPath:_zipPath password:password.length > 0 ? password : nil completionHandler:^(NSArray<SZipPreViewItem *> * _Nullable items, BOOL succeeded, NSError * _Nullable error) {
+        NSLog(@"%@", items);
+    }];
+    
     if (success) {
         NSLog(@"Success unzip");
         self.info.text = @"Success unzip";
