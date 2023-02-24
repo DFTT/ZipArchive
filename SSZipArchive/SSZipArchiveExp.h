@@ -1,5 +1,5 @@
 //
-//  SSZipArchivePreview.h
+//  SSZipArchiveExp.h
 //  Pods
 //
 //  Created by 大大东 on 2023/2/22.
@@ -28,11 +28,18 @@ typedef NS_ENUM(NSInteger, SZipFileType){
 
 
 
-@interface SSZipArchivePreview: NSObject
+@interface SSZipArchiveExp: NSObject
 
+/// 预览一个zip文件的内容 不解压 速度快
 + (void)preViewZipFileAtPath:(NSString *)path
                     password:(nullable NSString *)password
            completionHandler:(void (^_Nullable)(NSArray<SZipPreViewItem *> * _Nullable items, BOOL succeeded, NSError * _Nullable error))completionHandler;
+
+/// 创建一个zip, 会保持paths里的文件夹路径 (原作者的实现 会把不同层级的文件 压缩到同一目录层级)
++ (BOOL)keepDirectoryCreateZipFileAtPath:(NSString *)outpath
+                               withPaths:(NSArray *)paths
+                                password:(nullable NSString *)password
+                         progressHandler:(void(^ _Nullable)(NSUInteger entryNumber, NSUInteger total))progressHandler;
 
 @end
 

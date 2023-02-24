@@ -141,6 +141,8 @@
 		37952C881F63BBD500DD6677 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = B423AE481C0DF7950004A2F1 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37952C891F63BBDA00DD6677 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = B423AE491C0DF7950004A2F1 /* SSZipArchive.m */; };
 		37952C8B1F63BBE400DD6677 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = B423AE4A1C0DF7950004A2F1 /* ZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BE8763A29A8571000E153E2 /* SSZipArchiveExp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8763829A8571000E153E2 /* SSZipArchiveExp.m */; };
+		5BE8763B29A8571000E153E2 /* SSZipArchiveExp.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE8763929A8571000E153E2 /* SSZipArchiveExp.h */; };
 		93CE5D5E227FE5C50003464F /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CE5D5D227FE5C50003464F /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93CE5D5F227FE5C50003464F /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CE5D5D227FE5C50003464F /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93CE5D60227FE5C50003464F /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CE5D5D227FE5C50003464F /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -197,6 +199,8 @@
 		378439CB227AC031000BC165 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		37952C261F63B50D00DD6677 /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37952C5E1F63BB7100DD6677 /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE8763829A8571000E153E2 /* SSZipArchiveExp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchiveExp.m; sourceTree = "<group>"; };
+		5BE8763929A8571000E153E2 /* SSZipArchiveExp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchiveExp.h; sourceTree = "<group>"; };
 		93CE5D5D227FE5C50003464F /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
 		AFF75A241C37279600F450AC /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B423AE1A1C0DF76A0004A2F1 /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +304,8 @@
 		B423AE251C0DF7950004A2F1 /* SSZipArchive */ = {
 			isa = PBXGroup;
 			children = (
+				5BE8763929A8571000E153E2 /* SSZipArchiveExp.h */,
+				5BE8763829A8571000E153E2 /* SSZipArchiveExp.m */,
 				B423AE481C0DF7950004A2F1 /* SSZipArchive.h */,
 				93CE5D5D227FE5C50003464F /* SSZipCommon.h */,
 				B423AE491C0DF7950004A2F1 /* SSZipArchive.m */,
@@ -427,6 +433,7 @@
 			files = (
 				3775F3C92276B14400A1840B /* mz_strm_zlib.h in Headers */,
 				3775F3A12276B14400A1840B /* mz_strm.h in Headers */,
+				5BE8763B29A8571000E153E2 /* SSZipArchiveExp.h in Headers */,
 				93CE5D5E227FE5C50003464F /* SSZipCommon.h in Headers */,
 				3775F3A92276B14400A1840B /* mz_strm_buf.h in Headers */,
 				3775F3712276B14400A1840B /* mz_os.h in Headers */,
@@ -672,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3775F3AD2276B14400A1840B /* mz_os_posix.c in Sources */,
+				5BE8763A29A8571000E153E2 /* SSZipArchiveExp.m in Sources */,
 				3775F3852276B14400A1840B /* mz_strm_mem.c in Sources */,
 				3775F3D52276B14400A1840B /* mz_strm_wzaes.c in Sources */,
 				3775F3A52276B14400A1840B /* mz_zip.c in Sources */,
